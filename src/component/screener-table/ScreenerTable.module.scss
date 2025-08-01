@@ -1,0 +1,187 @@
+.table-container {
+	position: relative;
+	width: 100%;
+	height: 93vh;
+	overflow: auto;
+
+	.screener-table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		background-color: rgba(255, 255, 255, 0.8);
+
+		thead {
+			tr {
+				th {
+					position: sticky;
+					top: 0;
+					left: 0;
+					background-color: rgb(185, 152, 255);
+					text-transform: capitalize;
+					font-size: 1rem;
+					text-align: center;
+					border-right: .08rem solid black;
+					z-index: 2;
+
+					&:last-child {
+						border-right: none;
+					}
+
+					&.sortable {
+						cursor: pointer;
+					}
+
+					&.card {
+						width: 10rem;
+					}
+
+					&.price, &.monster, &.type {
+						width: 8rem;
+					}
+
+					&.grade, &.year {
+						width: 5rem;
+					}
+
+					span {
+						user-select: none;
+					}
+
+					.sort-icon {
+						display: none;
+						position: relative;
+						width: 1rem;
+						height: 1rem;
+						margin: 0 .5rem .2rem .5rem;
+						vertical-align: middle;
+						fill: none;
+						stroke: black;
+						stroke-width: .15rem;
+						stroke-linecap: round;
+
+						&.sort {
+							display: inline;
+						}
+
+						&.ascending {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+
+		tbody {
+			height: 80vh;
+
+			tr {
+				&:first-child td:hover img {
+					top: 0;
+				}
+
+				&:last-child td:hover img {
+					top: unset;
+					bottom: 0;
+				}
+
+				td {
+					position: relative;
+					padding: .1rem;
+					text-align: center;
+					border: .08rem solid black;
+					text-transform: capitalize;
+
+					&:first-child {
+						border-left: none;
+					}
+
+					&:last-child {
+						border-right: none;
+					}
+
+					img {
+						width: 0;
+						height: 0;
+						object-fit: contain;
+						z-index: 2;
+					}
+
+					&:hover img {
+						position: absolute;
+						top: -100%;
+						left: 100%;
+						width: 200px;
+						height: 300px;
+					}
+				}
+			}
+		}
+
+		tfoot tr td {
+			position: sticky;
+			left: 0;
+			bottom: 0;
+			padding: .3rem;
+			text-align: center;
+			background-color: rgb(185, 152, 255);
+
+			select {
+				width: 3rem;
+				height: 2rem;
+				margin: 0 1rem;
+				padding: .2rem;
+				cursor: pointer;
+			}
+
+			button {
+				width: 3rem;
+				height: 2rem;
+				border: none;
+				vertical-align: middle;
+				border-radius: .2rem;
+				cursor: pointer;
+				padding: .2rem;
+				background-color: transparent;
+
+				&:hover svg {
+					stroke: black;
+				}
+
+				&.items-per-page {
+					font-size: 1rem;
+					color: black;
+
+					&:hover {
+						background-color: rgba(181, 201, 255, 0.8);
+
+						&:disabled {
+							background-color: unset;
+						}
+					}
+				}
+
+				&.previous-page {
+					margin-left: calc(100% - 20rem);
+				}
+
+				&:disabled {
+					opacity: .4;
+					cursor: unset;
+
+					&:hover svg {
+						stroke: #505050;
+					}
+				}
+
+				svg {
+					width: 1.5rem;
+					height: 1.5rem;
+					fill: none;
+					stroke: #505050;
+					stroke-width: .15rem;
+					stroke-linecap: round;
+				}
+			}
+		}
+	}
+}

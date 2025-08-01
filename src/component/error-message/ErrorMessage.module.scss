@@ -1,0 +1,36 @@
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+
+	p {
+		height: 3.5rem;
+		font-size: 1.5rem;
+		font-weight: bold;
+		line-height: 1.5rem;
+		text-align: center;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+	}
+
+	.error-background {
+		width: 150px;
+		height: 140px;
+		background-image: url("/public/error.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 10% 0;
+	}
+
+	.custom-message {
+		margin-top: 0.5rem;
+	}
+}

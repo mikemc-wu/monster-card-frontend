@@ -1,0 +1,30 @@
+.container {
+	margin-left: 3rem;
+
+	.title {
+		color: white;
+		font-size: 3rem;
+		font-weight: bold;
+		line-height: 2.5rem;
+		text-align: center;
+		margin: 2rem 0 4rem 0;
+
+		&.water, &.fairy  {
+			color: black;
+		}
+	}
+
+	.loading-spinner,
+	.error-message {
+		margin-top: 7rem;
+	}
+
+	.card-wrapper {
+		position: relative;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(165px, 248px));
+		grid-auto-rows: minmax(300px, 450px);
+		grid-gap: 20px;
+	}
+}

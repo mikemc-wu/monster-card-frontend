@@ -1,0 +1,77 @@
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  z-index: -99;
+}
+
+.blur-filter {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: -98;
+}
+
+.normal {
+  background-image: url("/public/normal.jpg");
+}
+
+.electric {
+  background-image: url("/public/electric.jpg");
+}
+
+.fire {
+  background-image: url("/public/fire.jpg");
+}
+
+.water {
+  background-image: url("/public/water.jpg");
+  filter: brightness(80%);
+}
+
+.grass {
+  background-image: url("/public/grass.jpg");
+}
+
+.fairy {
+  background-image: url("/public/fairy.jpg");
+  filter: brightness(90%);
+}
+
+.dark {
+  background-image: url("/public/dark.jpg");
+}
+
+.ground {
+  background-image: url("/public/ground.jpg");
+}
+
+.flying {
+  background-image: url("/public/flying.jpg");
+}
+
+.psychic {
+  background-image: url("/public/psychic.jpg");
+}
+
+.page-container {
+  margin: 1rem 3rem 1rem 6rem;
+
+  & > * {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+  }
+}

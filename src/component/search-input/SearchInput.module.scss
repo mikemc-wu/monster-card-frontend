@@ -1,0 +1,89 @@
+.liquid-glass-form {
+	position: sticky;
+	top: 2rem;
+	width: 90%;
+	max-width: 800px;
+	height: 4rem;
+	margin-right: 2rem;
+	padding: 0.7rem;
+	opacity: 0.5;
+	display: flex;
+	z-index: 9;
+	transition: opacity 0.3s ease;
+
+	&:has(.search-select:hover, input:hover, input:focus, button:hover, button:focus) {
+		opacity: 1;
+	}
+
+	& > * {
+		height: 100%;
+	}
+
+	.select-container {
+		flex-shrink: 0;
+	}
+
+	.search-input-container {
+		flex-grow: 1;
+
+		input {
+			color: rgba(0, 0, 0, 0.75);
+			padding-left: 0.5rem;
+			font-size: 1rem;
+			width: 100%;
+			height: 100%;
+			border: none;
+			outline: none;
+			background-color: white;
+
+			&:focus + ul {
+				visibility: visible;
+				opacity: 1;
+				transition: visibility 0s ease, opacity 0.2s ease;
+			}
+		}
+
+		ul {
+			visibility: hidden;
+			opacity: 0;
+			border-radius: 0 0 0.5rem 0.5rem;
+			background-color: white;
+			transition: visibility 0s ease 0.2s, opacity 0.2s ease;
+
+			li {
+				color: rgba(0, 0, 0, 0.75);
+				padding: 0.2rem 0.5rem;
+				list-style: none;
+
+				&:hover {
+					background-color: rgba(245, 222, 179, 0.5);
+				}
+
+				&:last-child {
+					border-radius: 0 0 0.5rem 0.5rem;
+				}
+			}
+		}
+	}
+
+	.search-button-container {
+		button {
+			width: 3rem;
+			height: 100%;
+			cursor: pointer;
+			border: none;
+			border-radius: 0 1rem 1rem 0;
+			background-color: white;
+
+			svg {
+				position: relative;
+				width: 1.5rem;
+				height: 1.5rem;
+				stroke: rgba(0, 0, 0, 0.5);
+				fill: none;
+				stroke-width: .2rem;
+				stroke-linecap: round;
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.container {
+	position: relative;
+	width: 100%;
+	min-height: 93vh;
+	margin-left: 3rem;
+
+	.loading-spinner,
+	.error-message,
+	.emptyMessage {
+		margin-top: 7rem;
+	}
+
+	.card-wrapper {
+		position: relative;
+		width: 100%;
+		margin-top: 3.5rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(165px, 248px));
+		grid-auto-rows: minmax(300px, 450px);
+		grid-gap: 20px;
+	}
+}
